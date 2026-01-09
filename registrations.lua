@@ -210,8 +210,8 @@ ambient_sounds.register_environment("deciduous_forest_night", {
     biomes = {"deciduous_forest"},
     sounds = {
         {
-            name = "ambient_sounds_night_main",
-            gain = 0.4,
+            name = "ambient_sounds_night_main_3",
+            gain = 0.15,
         },
     },
     env_check = function(tdef)
@@ -603,7 +603,7 @@ ambient_sounds.register_random_sound({
         "swamp_day", "swamp_night", -- ethereal
     },
     sounds = {
-        {name = "ambient_sounds_bamboo_flute", gain = 0.02},
+        {name = "ambient_sounds_flute_3", gain = 0.02},
     },
     min_interval = 120,
     max_interval = 240,

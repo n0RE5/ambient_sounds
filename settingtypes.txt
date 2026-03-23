@@ -1,0 +1,20 @@
+[Sound]
+
+#  Time for fading in/out when switching sounds in seconds
+ambient_sounds_fade (Fade Time) float 4.0 0 10.0
+
+ambient_sounds_gain (Gain) float 0.5 0 1
+
+[Advanced]
+
+#  May cause performance issues if too high
+ambient_sounds_detection (Detection Radius) int 15 5 25
+
+#  How many water nodes are needed in detection range to be an ocean
+ambient_sounds_water (Ocean Water Threshold) int 200 10 500
+
+#  Interval for checking the enviroment in seconds
+ambient_sounds_interval (Check Interval) float 2.0 0.1 10.0
+
+#  Enables debug logging
+ambient_sounds_debug (Debug Logging) bool false

@@ -316,6 +316,7 @@ ambient_sounds.register_environment("rainforest_night", {
     priority = 1,
 })
 
+if core.get_modpath("default") then
 -- Ocean day
 ambient_sounds.register_environment("ocean_day", {
     biomes = {},
@@ -373,6 +374,7 @@ ambient_sounds.register_environment("ocean_night", {
     nodes = {"default:water_source", "default:water_flowing"},
     priority = 2,
 })
+end
 
 -- Cave
 ambient_sounds.register_environment("cave", {
@@ -412,6 +414,7 @@ ambient_sounds.register_environment("default", {
 
 --- Subenvironment registrations
 
+if core.get_modpath("default") then
 -- Pond night
 ambient_sounds.register_subenvironment("pond_night", {
     environments = {"deciduous_forest_night", "plains_night"},
@@ -438,6 +441,7 @@ ambient_sounds.register_subenvironment("pond_night", {
     },
     priority = 1,
 })
+end
 
 --- Random sounds registrations
 

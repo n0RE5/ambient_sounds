@@ -19,7 +19,7 @@ ambient_sounds.nodes_to_check = {}
 -- Debug log
 function ambient_sounds.debug(message)
     if ambient_sounds.config.debug_mode then
-        core.log("debug", "[Ambient Sounds] " .. message)
+        core.log("[Ambient Sounds] " .. message)
     end
 end
 

@@ -1,23 +1,6 @@
 ambient_sounds = {}
 
 dofile(core.get_modpath("ambient_sounds") .. "/settings.lua")
-
--- Configuration
-ambient_sounds.config = {
-    -- Enable debug logging
-    debug_mode = ambient_sounds.debug_mode or false,
-    -- Interval for checking the environment (in seconds)
-    check_interval = ambient_sounds.check_interval or 2.0,
-    -- Nodes detection radius
-    detection_radius = ambient_sounds.detection_radius or 15,
-    -- Time for fading in/out when switching sounds (in seconds)
-    fade_time = ambient_sounds.fade_time or 2.0,
-    -- Default gain
-    gain = ambient_sounds.gain or 0.5,
-    -- Ocean water count threshold
-    ocean_water_count = ambient_sounds.ocean_water_count or 200,
-}
-
 dofile(core.get_modpath("ambient_sounds") .. "/api.lua")
 dofile(core.get_modpath("ambient_sounds") .. "/internal.lua")
 dofile(core.get_modpath("ambient_sounds") .. "/registrations.lua")

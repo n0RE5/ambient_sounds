@@ -33,8 +33,7 @@ local function check_environment_match(env_def, check_def)
     if env_def.biomes and #env_def.biomes > 0 then
         local biome_match = false
         for _, biome in ipairs(env_def.biomes) do
-            -- Pattern match fallback
-            if biome_name == biome or string.find(biome_name, biome, 1, true) then
+            if biome_name == biome then
                 biome_match = true
                 break
             end

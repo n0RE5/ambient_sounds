@@ -104,15 +104,15 @@ function ambient_sounds.register_environment(name, tdef)
 
     -- Set nodes to check
     if tdef.nodes then
-        local flag = true
-        for i, node in ipairs(tdef.nodes) do
-            for j, node_name in ipairs(ambient_sounds.nodes_to_check) do
+        for _, node in ipairs(tdef.nodes) do
+            local node_exists = false
+            for _, node_name in ipairs(ambient_sounds.nodes_to_check) do
                 if node_name == node then
-                    flag = false
+                    node_exists = true
                     break
                 end
             end
-            if flag then
+            if not node_exists then
                 table.insert(ambient_sounds.nodes_to_check, node)
             end
         end
@@ -226,15 +226,15 @@ function ambient_sounds.register_subenvironment(name, tdef)
 
     -- Set nodes to check
     if tdef.nodes then
-        local flag = true
-        for i, node in ipairs(tdef.nodes) do
-            for j, node_name in ipairs(ambient_sounds.nodes_to_check) do
+        for _, node in ipairs(tdef.nodes) do
+            local node_exists = false
+            for _, node_name in ipairs(ambient_sounds.nodes_to_check) do
                 if node_name == node then
-                    flag = false
+                    node_exists = true
                     break
                 end
             end
-            if flag then
+            if not node_exists then
                 table.insert(ambient_sounds.nodes_to_check, node)
             end
         end

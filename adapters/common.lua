@@ -1,6 +1,24 @@
 ambient_sounds.adapter_utils = {}
 local utils = ambient_sounds.adapter_utils
 
+function utils.biome_family_names(biomes)
+    local names, seen = {}, {}
+    for _, base in ipairs(biomes) do
+        for _, suffix in ipairs({"", "_beach", "_shore", "_dunes", "_highland",
+                "_swamp", "_floatland", "_ocean", "_under", "_cave"}) do
+            local name = base .. suffix
+            if not seen[name] then
+                seen[name], names[#names + 1] = true, name
+            end
+        end
+    end
+    return names
+end
+
+function utils.register_family_day_night(name, biomes, day_sounds, night_sounds)
+    utils.register_day_night(name, utils.biome_family_names(biomes), day_sounds, night_sounds)
+end
+
 function utils.is_day(timeofday)
     return timeofday >= 0.25 and timeofday <= 0.75
 end

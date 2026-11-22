@@ -7,21 +7,21 @@ local wind_night = {{name = "ambient_sounds_howling_wind", gain = 0.3}}
 local snow = {{name = "ambient_sounds_snowy_biomes_main_1", gain = 0.4}}
 local cicadas = {{name = "ambient_sounds_cicadas_desert_1", pitch = 0.9, gain = 0.35}}
 
-utils.register_day_night("icesheet", {"icesheet"}, wind_night, wind_night)
-utils.register_day_night("tundra", {"tundra"}, snow, wind_night)
-utils.register_day_night("taiga", {"taiga"}, wind_day, wind_night)
-utils.register_day_night("snowy", {"snowy_grassland"}, snow, wind_night)
-utils.register_day_night("plains", {"grassland"}, prairie, quiet_night)
-utils.register_day_night("coniferous_forest", {"coniferous_forest"}, snow, wind_night)
-utils.register_day_night("deciduous_forest", {"deciduous_forest"}, {
+utils.register_family_day_night("icesheet", {"icesheet"}, wind_night, wind_night)
+utils.register_family_day_night("tundra", {"tundra"}, snow, wind_night)
+utils.register_family_day_night("taiga", {"taiga"}, wind_day, wind_night)
+utils.register_family_day_night("snowy", {"snowy_grassland"}, snow, wind_night)
+utils.register_family_day_night("plains", {"grassland"}, prairie, quiet_night)
+utils.register_family_day_night("coniferous_forest", {"coniferous_forest"}, snow, wind_night)
+utils.register_family_day_night("deciduous_forest", {"deciduous_forest"}, {
     {name = "ambient_sounds_ethereal_prairie_main", gain = 0.5},
     {name = "ambient_sounds_leaves_wind", gain = 0.05},
 }, quiet_night)
-utils.register_day_night("desert", {"desert", "sandstone_desert", "cold_desert"}, cicadas, cicadas)
-utils.register_day_night("savanna", {"savanna"}, cicadas, {
+utils.register_family_day_night("desert", {"desert", "sandstone_desert", "cold_desert"}, cicadas, cicadas)
+utils.register_family_day_night("savanna", {"savanna"}, cicadas, {
     {name = "ambient_sounds_savanna_main_night", gain = 0.15},
 })
-utils.register_day_night("rainforest", {"rainforest"}, {
+utils.register_family_day_night("rainforest", {"rainforest"}, {
     {name = "ambient_sounds_jungle_main", gain = 0.3},
 }, {
     {name = "ambient_sounds_jungle_main_night", gain = 0.3},
